@@ -86,7 +86,7 @@ if( Number(monto) && Number(cuotas)) {
         alert("Gracias por su consulta!");
     }*/
 
-let rta = "";
+/*let rta = "";
 let resultado;
 let opc = "";
 
@@ -144,5 +144,86 @@ do {
     }
 
 
-} while (validacion() === "S");
+} while (validacion() === "S");*/
 
+
+
+//PRIMERA ENTREGA DE TRABAJO FINAL
+
+function saludar(nombreCompleto){
+    alert("Buenas noches " + nombreCompleto);
+}
+
+let persona = prompt("Ingresa tu nombre completo");
+
+saludar(persona);
+
+let usuario = prompt("Si desea realizar una compra ingrese SI , de lo contrario NO");
+
+if (usuario.toUpperCase() == "SI"){
+    console.log(alert("Bienvendo al carrito de compras"));
+const arrayProductos = [];
+const arrayCompra = [];
+
+class Productos{
+    constructor (nombre,precio){
+        this.nombre = nombre,
+        this.precio = precio
+    }
+    
+}
+
+console.log( "Estas son nuestros productos:");
+for (let valor of arrayProductos){
+    console.log(valor.nombre);
+}
+
+arrayProductos.forEach((el) => {console.log(el.nombre)});
+
+let producto;
+let precioFinal = 0;
+
+while (producto != ""){
+    producto = prompt("Ingresa el numero del producto que desees cargar  \n1 remera  \n2 jean  \n3 zapatillas \n4 sombrero \n5 medias \n6 cinto")
+    const n1= new Productos("remera", 5000);
+    arrayProductos.push (n1)
+    const n2 = new Productos ("jean", 10000);
+    arrayProductos.push (n2)
+    const n3 = new Productos ("zapatillas", 8000);
+    arrayProductos.push (n3)
+    const n4 = new Productos ("sombrero", 1500);
+    arrayProductos.push (n4)
+    const n5 = new Productos ("medias", 800);
+    arrayProductos.push (n5)
+    const n6 = new Productos ("cinto", 1800);
+    arrayProductos.push (n6)
+
+    for (const produ of arrayProductos){
+        if (producto == produ.nombre){
+            precioFinal = precioFinal + produ.precio;
+        }    
+    }
+}
+alert ("El precio final es de " + precioFinal);
+
+let eliminaProducto = prompt('Queres eliminar algun producto?')
+let productoEliminado;
+
+
+if (eliminaProducto == 'si'){
+    while (productoEliminado != "NO"){
+        productoEliminado = prompt('Ingresa el nombre del producto a eliminar, ingresa NO para terminar');
+        for (let value of arrayProductos){
+            if (productoEliminado == value.nombre){
+                precioFinal = precioFinal - value.precio;
+            }
+        }
+    }
+}else
+alert ('Tu precio final es de' + " " + precioFinal);
+
+}else{
+    usuario.toUpperCase() == "NO"
+    console.log(alert ("Muchas gracias por tu visita"));
+    
+}
