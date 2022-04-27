@@ -1,0 +1,50 @@
+.titulo{background-color:slategrey;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+body {padding: 0;
+    margin: 0;
+    background-color: silver;
+
+
+}
+#info-table{text-align: center;
+    background-color: slategrey;
+
+}
+			#info-input{width: 1200px;margin: 0px auto;}
+			#info-input>div{
+				width: 1200px;
+				margin: 20px 0px;
+			}
+			.shopCount{color: orange;}
+			a{text-decoration: none;color: deepskyblue;}
+			#resultTotalMoney,#integralTotal{color: orange;}
+			.total-div{text-align: right;}
+			.btdelete{float: left;}
+			.btorinter-div{height: auto;overflow: auto;}
+			.viewIntegral{float: right;}
+			.btbuy{background-color: orange;color: white;border: 0px;float: right;}
+			#shop{
+				width: 800px;margin: 0px auto;
+				height: auto;
+				overflow: auto;
+			}
+			#shop li{
+				text-align: center;
+				list-style: none;
+				float: left;
+				height: auto;
+				overflow: auto;
+				margin: 20px;
+			}
+			#shop a{
+				display: block;
+				height: auto;
+				overflow: auto;
+			}
+			.price{color: red;}

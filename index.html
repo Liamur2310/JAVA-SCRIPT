@@ -5,11 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="titulo">
-        <h1>Curso JavaScript!!</h1>
+        <h1>Bienvenido a la tienda LM</h1>
     </div>
+
+    <div>
+        <div id="shop">
+            <ul>
+                <li>
+                    <a href="#" onclick="addToCart(this);">
+                        <img src="assets/jean.jpg" height="100" width="100"/><br />
+                        <span class="price">8000</span>$ <br />
+                        <button>Añadir al carrito</button> 
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="addToCart(this);">
+                        <img src="assets/medias.jpg" height="100" width="100"/><br />
+                        <span class="price">800</span>$<br />
+                        <button>Añadir al carrito</button> 
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="addToCart(this);">
+                        <img src="assets/remera.jpg" height="100" width="100"/><br />
+                        <span class="price">5000</span>$<br />
+                        <button>Añadir al carrito</button> 
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="addToCart(this);">
+                        <img src="assets/sombrero.jpg" height="100" width="100"/><br />
+                        <span class="price">1500</span>$<br />
+                        <button>Añadir al carrito</button> 
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="addToCart(this);">
+                        <img src="assets/zapatillas.jpg" height="100" width="100"/><br />
+                        <span class="price">10000</span>$<br />
+                        <button>Añadir al carrito</button> 
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="info-table">
+            <h1>carrito de compras</h1>
+            <table id="mytable"  width="1200" align="center"></table>
+        </div>
+        <div id="info-input">
+            <div class="total-div">
+                <span>Precio total de los Productos (sin envio):<span id="resultTotalMoney">0</span>Pesos</span>
+            </div>
+            <div class="btorinter-div">
+                <button onclick="selectDelete()" class="btdelete">Eliminar seleccionado</button>
+               
+            </div>
+            <div>
+                <button class="btbuy" onclick="buyNow()">Compra ahora</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+
 </body>
 </html>
