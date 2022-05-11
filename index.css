@@ -1,50 +1,172 @@
-.titulo{background-color:slategrey;
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+@font-face {
+  font-family: "Inconsolata";
+  src: url(../fonts/inconsolata.ttf);
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../fonts/Poppins-Bold.ttf);
+}
+
+*{
+ box-sizing: border-box;
+}
+body{
     margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    box-sizing: border-box;
+    background-color: #F3E4E0;
+    font-family:"Inconsolata"
+}
+img{
+    display: block;
+    width: 100%;
+}
+
+.main-header{
+    padding: 0 20px;
+}
+
+.main-header__tittle{
     text-align: center;
+    font-size: 2.5em;
+    margin: 10px 0;
+    color: #454546;
+    font-family: "Poppins";
+}
+.main-nav{
+    display: none;
+}
+
+.main-header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-menu{
+    font-size: 1.5rem;
+    border: 1px solid #454546;
+    display: block;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.main-header__btn{
+    display: block;
+    padding: 10px 30px;
+    color: #454546;
+    border: 1px solid #454546;
+    text-decoration: none;
+    
 
 }
-body {padding: 0;
+
+.main-header__input{
+    display: block;
+    padding: 10px;
+}
+
+.main{
+    padding: 20px;
+}
+
+.container-slider{
+    margin: 10px 0;
+    position: relative;
+
+}
+.slider {
+    display: flex;
+    width: 500%;
+    height: 300%;
+    margin-left: -100%;
+    position: relative;
+}
+.slider:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    height: 100%;
+}
+.slider__section{
+    width: 30%;
+    position: relative;
+    height: 20%;
+}
+.slider__img{
+    display: block;
+    width: 100%;
+    height: 55%;
+    object-fit: cover;
+}
+.slider__btn{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999;
+}
+.slider__btn:hover{
+    background: #fff;
+}
+.slider__btn--left{
+    left: 50px;
+}
+
+.slider__btn--right{
+    right: 50px;
+}
+
+.slider__content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -100%);
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+}
+
+.slider__title{
+    font-size: 2.2em;
     margin: 0;
-    background-color: silver;
-
-
 }
-#info-table{text-align: center;
-    background-color: slategrey;
 
+.slider__txt{
+    margin: 5px 0;
 }
-			#info-input{width: 1200px;margin: 0px auto;}
-			#info-input>div{
-				width: 1200px;
-				margin: 20px 0px;
-			}
-			.shopCount{color: orange;}
-			a{text-decoration: none;color: deepskyblue;}
-			#resultTotalMoney,#integralTotal{color: orange;}
-			.total-div{text-align: right;}
-			.btdelete{float: left;}
-			.btorinter-div{height: auto;overflow: auto;}
-			.viewIntegral{float: right;}
-			.btbuy{background-color: orange;color: white;border: 0px;float: right;}
-			#shop{
-				width: 800px;margin: 0px auto;
-				height: auto;
-				overflow: auto;
-			}
-			#shop li{
-				text-align: center;
-				list-style: none;
-				float: left;
-				height: auto;
-				overflow: auto;
-				margin: 20px;
-			}
-			#shop a{
-				display: block;
-				height: auto;
-				overflow: auto;
-			}
-			.price{color: red;}
+
+.slider__link{
+    display: block;
+    border: 1px solid #ff4e00;
+    color: white;
+    text-align: center; 
+    text-decoration: none;
+    padding: 10px ;
+    width: 150px;
+    margin: 10px auto;
+}
+
+/* ESTILOS DE PRODUCTOS*/
+
+.container-products{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+.product{
+    border: 1px solid #ccc;
+    padding: 20px;
+}

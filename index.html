@@ -4,71 +4,322 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500&family=Inconsolata&family=Outfit:wght@900&family=Poppins:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <title>Document</title>
 </head>
 <body>
-    <div class="titulo">
-        <h1>Bienvenido a la tienda LM</h1>
+    <header class="main-header">
+        <div class="container container--flex">
+            <div class="main-header__container">
+                <h1 class="main-header__title">NEW GENERATION</h1>
+                <span class="icon-menu fa-solid fa-bars" id="btn-menu"></span>
+                <nav class="main-nav" id="main-nav">
+                    <ul class="menu">
+                        <li class="menu__item"><a href="" class="menu__link">HOME</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">ABOUT</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">FEATURES</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">SHOP</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">CONTACT</a></li>
+                    </ul>
+
+                </nav>
+            </div>
+            
+            <div class="main-header__container">
+                <span class="main-header__txt">Need Help</span>
+                <p class="main-header__txt"><i class="fa-solid fa-phone"></i> Call 3512225559</p>
+            </div>
+            
+            <div class="main-header__container">
+                <i class="fa-solid fa-user"></i>
+                <a href="" class="main-header__btn">My cart <i class="fa-solid fa-cart-shopping"></i></a>
+                <input type="search" class="main-header__input" placeholder="Buscar productos"><i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+    </header>
+
+<div class="container-slider">
+    <div class="slider" id="slider">
+        <div class="slider__section">
+            <img src="./assets/reel 3.jpg" alt="" class="slider__img">
+            <div class="slider__content">
+                <h2 class="slider__title">SUMMER IS COMING!</h2>
+                <P class="slider__txt">Nueva temporada primavera/verano '23</P>
+                <a href="" class="slider__link">SHOP NOW</a>
+            </div>
+        </div>
+        <div class="slider__section">
+            <img src="./assets/reel 5.jpg" alt="" class="slider__img">
+            <div class="slider__content">
+                <h2 class="slider__title">SUMMER IS COMING!</h2>
+                <P class="slider__txt">Nueva temporada primavera/verano '23</P>
+                <a href="" class="slider__link">SHOP NOW</a>
+            </div>
+        </div>
+        <div class="slider__section">
+            <img src="./assets/reel 1.jpg" alt="" class="slider__img">
+            <div class="slider__content">
+                <h2 class="slider__title">WINTER SALE 50%</h2>
+                <P class="slider__txt">Ultimos dias!</P>
+                <a href="" class="slider__link">SHOP NOW</a>
+            </div>
+        </div>
+        <div class="slider__section">
+            <img src="./assets/reel 2.jpg" alt="" class="slider__img">
+            <div class="slider__content">
+                <h2 class="slider__title">WINTER SALE 50%</h2>
+                <P class="slider__txt">Ultimos dias!</P>
+                <a href="" class="slider__link">SHOP NOW</a>
+            </div>
+        </div>
+        <div class="slider__section">
+            <img src="./assets/reel 4.jpg" alt="" class="slider__img">
+            <div class="slider__content">
+                <h2 class="slider__title">WINTER SALE 50%</h2>
+                <P class="slider__txt">Ultimos dias!</P>
+                <a href="" class="slider__link">SHOP NOW</a>
+            </div>
+        </div>
     </div>
+    <div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
+    <div class="slider__btn slider__btn--left" id="btn-left">&#60;</div>
+</div>
 
-    <div>
-        <div id="shop">
-            <ul>
-                <li>
-                    <a href="#" onclick="addToCart(this);">
-                        <img src="assets/jean.jpg" height="100" width="100"/><br />
-                        <span class="price">8000</span>$ <br />
-                        <button>Añadir al carrito</button> 
-                    </a>
-                </li>
-                <li>
-                    <a href="#" onclick="addToCart(this);">
-                        <img src="assets/medias.jpg" height="100" width="100"/><br />
-                        <span class="price">800</span>$<br />
-                        <button>Añadir al carrito</button> 
-                    </a>
-                </li>
-                <li>
-                    <a href="#" onclick="addToCart(this);">
-                        <img src="assets/remera.jpg" height="100" width="100"/><br />
-                        <span class="price">5000</span>$<br />
-                        <button>Añadir al carrito</button> 
-                    </a>
-                </li>
-                <li>
-                    <a href="#" onclick="addToCart(this);">
-                        <img src="assets/sombrero.jpg" height="100" width="100"/><br />
-                        <span class="price">1500</span>$<br />
-                        <button>Añadir al carrito</button> 
-                    </a>
-                </li>
-                <li>
-                    <a href="#" onclick="addToCart(this);">
-                        <img src="assets/zapatillas.jpg" height="100" width="100"/><br />
-                        <span class="price">10000</span>$<br />
-                        <button>Añadir al carrito</button> 
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div id="info-table">
-            <h1>carrito de compras</h1>
-            <table id="mytable"  width="1200" align="center"></table>
-        </div>
-        <div id="info-input">
-            <div class="total-div">
-                <span>Precio total de los Productos (sin envio):<span id="resultTotalMoney">0</span>Pesos</span>
+<main class="main">
+    <div class="container">
+      <h2 class="main-title">Nuestros Productos</h2>
+      <section class="container-products">
+        <div class="product">
+            <img src="assets/inv1.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Gorro lana</h3>
+                <span class="producto__price"> $ 1200</span>
             </div>
-            <div class="btorinter-div">
-                <button onclick="selectDelete()" class="btdelete">Eliminar seleccionado</button>
-               
-            </div>
-            <div>
-                <button class="btbuy" onclick="buyNow()">Compra ahora</button>
-            </div>
+            <i class="fa-solid fa-cart-plus"></i>
         </div>
+        <div class="product">
+            <img src="assets/inv2.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Swetter tejido</h3>
+                <span class="producto__price"> $ 5000</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/inv3.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Campera corderito</h3>
+                <span class="producto__price"> $ 7200</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/inv4.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Gorro con apliques</h3>
+                <span class="producto__price"> $ 1990</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/inv5.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Pantalon corderito</h3>
+                <span class="producto__price"> $ 4900</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/inv6.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Pantalon corderoy</h3>
+                <span class="producto__price"> $ 6990</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/inv7.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Botas unisex</h3>
+                <span class="producto__price"> $ 4550</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/inv8.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Capucha con orejas</h3>
+                <span class="producto__price"> $1990</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/modelo1.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Enterito</h3>
+                <span class="producto__price"> $ 6600</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/modelo2.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Remera nino FP50</h3>
+                <span class="producto__price"> $ 3400</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/modelo3.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Bikini nina</h3>
+                <span class="producto__price"> $5300</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/modelo4.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Remera nina FP50</h3>
+                <span class="producto__price"> $2990</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/modelo5.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Malla nino FP50</h3>
+                <span class="producto__price"> $ 4550</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/modelo6.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Malla nina entera FP50</h3>
+                <span class="producto__price"> $ 4500</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/modelo7.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Toallon con capucha </h3>
+                <span class="producto__price"> $ 4300</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/modelo8.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Remera nino FLY</h3>
+                <span class="producto__price"> $ 2500</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/modelo9.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Vestido nina de broderie</h3>
+                <span class="producto__price"> $ 6990</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/modelo10.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Remera nino SMILE</h3>
+                <span class="producto__price"> $ 2500</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/modelo11.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Sombrero nina con aplique</h3>
+                <span class="producto__price"> $ 3200</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/modelo12.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Jardinero de corderoy</h3>
+                <span class="producto__price"> $ 6990</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/modelo13.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Toallon Rayas</h3>
+                <span class="producto__price"> $ 4200</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/modelo14.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Malla entera Flores</h3>
+                <span class="producto__price"> $ 4200</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/modelo15.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Bikini Sirena</h3>
+                <span class="producto__price"> $ 5800</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/modelo16.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle"> Bombacha FP50 nina</h3>
+                <span class="producto__price"> $ 1990</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/modelo17.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Bikini Duo</h3>
+                <span class="producto__price"> $ 5600</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/modelo18.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Camisa nino a cuadros</h3>
+                <span class="producto__price"> $ 6800</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/modelo19.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Vestido nina</h3>
+                <span class="producto__price"> $ 3990</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+        <div class="product">
+            <img src="assets/modelo20.jpg" alt="" class="product__img">
+            <div class="product__description">
+                <h3 class="product__tittle">Remera nino Big Dream</h3>
+                <span class="producto__price"> $ 2500</span>
+            </div>
+            <i class="fa-solid fa-cart-plus"></i>
+        </div>
+      </section>
     </div>
+</main>
 
 
 
@@ -76,7 +327,6 @@
 
 
 
-    <script src="index.js"></script>
-
+<script src="index.js"></script>
 </body>
 </html>
