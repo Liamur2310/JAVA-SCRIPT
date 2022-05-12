@@ -150,7 +150,7 @@ img{
 
 .slider__link{
     display: block;
-    border: 1px solid #ff4e00;
+    border: 2px solid #D37C65 ;
     color: white;
     text-align: center; 
     text-decoration: none;
@@ -169,4 +169,27 @@ img{
 .product{
     border: 1px solid #ccc;
     padding: 20px;
+    text-align: center;
 }
+
+.product__img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product__tittle{
+    text-align: center;
+
+}
+
+.producto__price{
+    color:#D37C65 ;
+    font-weight: bold;
+}
+
+.product__icon{
+    display: block;
+    margin-top: 10px; 
+}
+
